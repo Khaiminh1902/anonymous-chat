@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear Anonymous Chat Storage</title>
+</head>
+<body>
+    <h1>Clear localStorage for Anonymous Chat</h1>
+    <p>This will clear any cached user data that might cause errors.</p>
+    <button onclick="clearStorage()">Clear Storage</button>
+    <p id="result"></p>
+
+    <script>
+        function clearStorage() {
+            localStorage.removeItem('anonymousChat_user');
+            sessionStorage.clear();
+            document.getElementById('result').innerText = 'Storage cleared! You can now refresh the app at localhost:3000';
+        }
+    </script>
+</body>
+</html>
